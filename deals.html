@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Search real car prices paid in the US by city, brand and model. Compare vehicle price, out-the-door price, dealer quote and owner paid samples."
+    />
+    <meta name="keywords" content="dealer quote by city, car out the door price by city, owner paid price by model, new car prices paid, OTD price, vehicle selling price, car transaction price" />
+    <link rel="canonical" href="https://www.autoleledger.com/deals.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Real Car Price Search by City, Brand and Model | AutoLedger" />
+    <meta property="og:description" content="Filter real owner paid prices, out-the-door prices and dealer quotes by US city, brand and model." />
+    <meta property="og:url" content="https://www.autoleledger.com/deals.html" />
+    <title>Real Car Price Search by City, Brand and Model | AutoLedger</title>
+    <link rel="icon" href="./assets/favicon.ico" sizes="any" />
+    <link rel="icon" href="./assets/autoleledger-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "US car real owner paid price search",
+  "url": "https://www.autoleledger.com/deals.html",
+  "description": "Search car owner paid price, out-the-door price and dealer quote by city, brand and model.",
+  "inLanguage": "en-US"
+}
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html#catalog" aria-label="AutoLedger home">
+        <img class="brand-mark" src="./assets/autoleledger-mark.svg" alt="" />
+        <span>AutoLedger</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="./index.html#catalog">Models</a>
+        <a class="active" href="./deals.html">Price Search</a>
+        <a href="./methodology.html">Methodology</a>
+      </nav>
+      <a class="header-action" href="./index.html#catalog">Model Directory</a>
+    </header>
+
+    <main class="deals-page">
+      <section class="section price-section" id="prices">
+        <div class="section-heading">
+          <p class="eyebrow">Real Deal Prices</p>
+          <h1>Search owner paid prices by city, brand and model</h1>
+          <p>
+            The same car can price differently across US metros, trims and dealer inventory. Select a city, brand and model to compare selling price, out-the-door price and dealer quote samples.
+          </p>
+        </div>
+
+        <div class="search-console">
+          <div class="filter-bar" role="search">
+            <label>
+              City
+              <select id="price-city-filter">
+                <option value="all">All Cities</option>
+              </select>
+            </label>
+            <label>
+              Brand
+              <select id="price-brand-filter">
+                <option value="all">All Brands</option>
+              </select>
+            </label>
+            <label>
+              Model
+              <select id="price-model-filter">
+                <option value="all">All Models</option>
+              </select>
+            </label>
+            <button type="button" id="price-search-button">Update Results</button>
+          </div>
+
+          <div class="price-summary" aria-label="Price range summary">
+            <article>
+              <span>Lowest Paid</span>
+              <strong id="summary-low">$28,900</strong>
+              <p id="summary-low-note">Lowest selling price in this sample set</p>
+            </article>
+            <article>
+              <span>Median Paid</span>
+              <strong id="summary-mid">$29,880</strong>
+              <p id="summary-mid-note">Best anchor for negotiation</p>
+            </article>
+            <article>
+              <span>Average OTD</span>
+              <strong id="summary-otd">$31,400</strong>
+              <p id="summary-otd-note">Average out-the-door price with taxes and fees</p>
+            </article>
+          </div>
+
+          <div class="deal-list" id="price-result-list" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>AutoLedger</span>
+      <p>Updated price signals help buyers judge dealer quotes with real market samples.</p>
+      <a href="./methodology.html">Methodology</a>
+      <a href="./privacy.html">Privacy</a>
+    </footer>
+
+    <script src="./deals.js?v=20260607-us-localized"></script>
+  </body>
+</html>

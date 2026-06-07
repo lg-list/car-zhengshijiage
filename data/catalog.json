@@ -1,0 +1,47 @@
+{
+  "updatedAt": "2026-06-04T00:00:00.000Z",
+  "brands": [
+    {
+      "id": "toyota",
+      "name": "Toyota",
+      "models": [
+        {
+          "id": "camry",
+          "name": "Toyota Camry",
+          "bodyType": "Sedan",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/1/12/2025_Toyota_Camry_Hybrid_XSE_AWD_%28United_States%29_front_view.png",
+          "priceRange": "$31,860-$41,520",
+          "sampleCount": 126,
+          "score": "4.3",
+          "trims": ["LE", "SE", "XLE", "XSE", "Limited"]
+        },
+        {
+          "id": "rav4",
+          "name": "Toyota RAV4",
+          "bodyType": "SUV",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Toyota%20RAV4%20(5th%20Gen.)%20front%20look.jpg?width=900",
+          "priceRange": "$34,200-$46,880",
+          "sampleCount": 118,
+          "score": "4.4",
+          "trims": ["LE", "XLE", "Adventure", "Limited", "Hybrid"]
+        }
+      ]
+    },
+    {
+      "id": "ford",
+      "name": "Ford",
+      "models": [
+        {
+          "id": "f-150",
+          "name": "Ford F-150",
+          "bodyType": "Pickup",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2025%20Ford%20F-150%20XLT%20Super%20Crew%2C%20front%20NYIAS%202025.jpg?width=900",
+          "priceRange": "$47,800-$76,900",
+          "sampleCount": 142,
+          "score": "4.5",
+          "trims": ["XL", "XLT", "Lariat", "Platinum", "Limited"]
+        }
+      ]
+    }
+  ]
+}

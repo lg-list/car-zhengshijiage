@@ -1,0 +1,16 @@
+<svg width="168" height="64" viewBox="0 0 168 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">AutoLedger real owner price logo</title>
+  <desc id="desc">A horizontal blue car outline with a verified price trend mark for real vehicle transaction prices.</desc>
+  <path d="M10 42.5L20.8 25.8C23.3 21.9 27.7 19.5 32.4 19.5H75.1C79.9 19.5 84.4 22 86.8 26.1L96.6 42.5" stroke="#0757C8" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M23.5 42.5H95.5C102.4 42.5 108 48.1 108 55V56.5H11V55C11 48.1 16.6 42.5 23.5 42.5Z" fill="#0757C8"/>
+  <path d="M32 43L39.8 29.8C41 27.8 43.1 26.6 45.4 26.6H67.5C69.9 26.6 72.1 27.9 73.2 30L80.2 43" stroke="#DCEBFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M28 56H39" stroke="#DCEBFF" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M78 56H91" stroke="#DCEBFF" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M119 46V17.5C119 13.9 121.9 11 125.5 11H150.5C154.1 11 157 13.9 157 17.5V46" stroke="#0757C8" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M128 26.5L135.1 33.5L149 20" stroke="#0F7A4F" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M125.5 47.5H157.5" stroke="#0757C8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M118 54H160" stroke="#A9D0FF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M118 36C124 37.2 129.2 38 135 35.5C141.9 32.6 146.5 27.4 154 28" stroke="#FFC72C" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="118" cy="36" r="3.5" fill="#FFC72C"/>
+  <circle cx="154" cy="28" r="3.5" fill="#FFC72C"/>
+</svg>

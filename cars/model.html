@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AutoLedger model price page with real owner paid prices, out-the-door prices, dealer quotes and MSRP by trim, year and US city." />
+    <meta name="keywords" content="car owner paid price, out the door price, OTD price, dealer quote, MSRP, car prices paid, real car transaction price" />
+    <link rel="canonical" href="https://www.autoleledger.com/cars/model.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Model Real Owner Paid Prices | Selling Price, OTD and Dealer Quote | AutoLedger" />
+    <meta property="og:description" content="Compare real owner paid prices, out-the-door prices, dealer quotes and MSRP by trim, year and city." />
+    <meta property="og:url" content="https://www.autoleledger.com/cars/model.html" />
+    <title>Model Real Owner Paid Prices | Selling Price, OTD and Dealer Quote | AutoLedger</title>
+    <link rel="icon" href="../assets/favicon.ico" sizes="any" />
+    <link rel="icon" href="../assets/autoleledger-mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Model real owner paid prices",
+  "url": "https://www.autoleledger.com/cars/model.html",
+  "description": "Search real owner paid price, out-the-door price, dealer quote and MSRP by model, trim, city and year.",
+  "keywords": "owner paid price, out the door price, OTD price, dealer quote, MSRP",
+  "inLanguage": "en-US"
+}
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#catalog" aria-label="AutoLedger home">
+        <img class="brand-mark" src="../assets/autoleledger-mark.svg" alt="" />
+        <span>AutoLedger</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="../index.html#catalog">Popular Brands</a>
+        <a class="active" id="price-page-link" href="./model.html">Owner Prices</a>
+        <a id="config-page-link" href="./config.html">Specs</a>
+      </nav>
+      <a class="header-action" href="../deals.html">Price Search</a>
+    </header>
+
+    <main class="model-page model-price-page">
+      <section class="model-hero compact-price-hero">
+        <div>
+          <span class="eyebrow">Real owner paid prices</span>
+          <h1 id="model-title">Model real owner paid prices</h1>
+          <p class="seo-slogan">Compare owner paid samples by trim, year and US city, with selling price, out-the-door price and dealer quote side by side.</p>
+        </div>
+        <div class="hero-metrics" aria-label="Price overview">
+          <div><strong id="sample-count">0</strong><span>Owner samples</span></div>
+          <div><strong id="score-value">0</strong><span>Reference score</span></div>
+        </div>
+      </section>
+
+      <section class="trim-selector-section">
+        <div class="section-toolbar">
+          <h2 class="sr-only">Available trims with owner paid prices</h2>
+          <span class="module-kicker">Available trims</span>
+          <div class="year-tabs" id="year-tabs" role="tablist" aria-label="Choose model year"></div>
+        </div>
+        <div class="trim-options" id="trim-options" aria-label="Trim options"></div>
+      </section>
+
+      <section class="trend-section">
+        <div class="section-toolbar">
+          <h2 class="sr-only">MSRP, 60-day owner paid price and dealer quote trend</h2>
+          <span class="module-kicker">Price trend</span>
+        </div>
+        <div class="trend-summary" id="trend-summary"></div>
+        <div class="price-line-chart">
+          <canvas id="price-trend-chart" aria-label="Owner price trend chart"></canvas>
+        </div>
+      </section>
+
+      <section class="owner-price-section">
+        <div class="section-toolbar">
+          <h2 class="sr-only">All real owner paid price samples</h2>
+          <span class="module-kicker">Owner paid samples</span>
+        </div>
+        <div class="city-tabs-row">
+          <div class="city-tabs" id="city-tabs" aria-label="City filter"></div>
+        </div>
+        <div class="owner-price-list" id="owner-price-list"></div>
+      </section>
+    </main>
+
+    <script>window.AUTOLEDGER_DATA_PATH = "../data/latest-deals.json";</script>
+    <script src="../assets/vendor/chart.umd.min.js"></script>
+    <script src="./model.js?v=20260607-us-localized"></script>
+  </body>
+</html>

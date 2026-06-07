@@ -1,0 +1,24 @@
+{
+  "sources": [
+    {
+      "name": "Toyota Camry Reddit public leads",
+      "url": "https://www.reddit.com/r/ToyotaCamry/search.json?q=out%20the%20door%20price&restrict_sr=1&sort=new",
+      "brand": "toyota",
+      "model": "camry",
+      "modelName": "Toyota Camry",
+      "defaultTrim": "SE",
+      "city": "Public",
+      "state": "US"
+    },
+    {
+      "name": "Ask Car Sales public leads",
+      "url": "https://www.reddit.com/r/askcarsales/search.json?q=out%20the%20door%20price&restrict_sr=1&sort=new",
+      "brand": "toyota",
+      "model": "camry",
+      "modelName": "Toyota Camry",
+      "defaultTrim": "SE",
+      "city": "Public",
+      "state": "US"
+    }
+  ]
+}
