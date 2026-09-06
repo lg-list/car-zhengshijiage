@@ -43,7 +43,7 @@ def fetch_url(url: str) -> str:
     request = urllib.request.Request(
         url,
         headers={
-            "User-Agent": "AutoLedgerBot/0.1 (+https://www.autoleledger.com/methodology.html)",
+            "User-Agent": "AutoLedgerBot/0.1 (+https://lg-list.github.io/car-zhengshijiage/methodology.html)",
             "Accept": "application/json,text/plain,text/html;q=0.9,*/*;q=0.8",
         },
     )

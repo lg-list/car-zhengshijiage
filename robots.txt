@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.autoleledger.com/sitemap.xml
+Sitemap: https://lg-list.github.io/car-zhengshijiage/sitemap.xml

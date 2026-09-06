@@ -566,6 +566,57 @@ h3 {
   text-align: center;
 }
 
+.seo-link-section {
+  padding-top: 48px;
+  padding-bottom: 72px;
+}
+
+.intent-link-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.intent-link-grid a {
+  display: grid;
+  align-content: center;
+  min-height: 86px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #ffffff;
+  color: #172640;
+  padding: 18px;
+  font-weight: 900;
+  line-height: 1.35;
+  transition:
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.intent-link-grid a:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+  transform: translateY(-1px);
+}
+
+.homepage-intent-grid a {
+  align-content: start;
+  min-height: 118px;
+}
+
+.homepage-intent-grid span {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--blue);
+  font-size: 15px;
+}
+
+.homepage-intent-grid strong {
+  color: #27364f;
+  font-size: 14px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -1688,6 +1739,7 @@ input:focus {
 .trim-selector-section,
 .trend-section,
 .owner-price-section,
+.search-intent-section,
 .config-compare-section,
 .page-switch {
   margin-top: 22px;
@@ -1695,6 +1747,26 @@ input:focus {
   border-radius: var(--radius);
   background: #ffffff;
   padding: 24px;
+}
+
+.search-intent-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+  gap: 22px;
+  align-items: center;
+}
+
+.search-intent-section h2 {
+  margin: 12px 0 12px;
+  font-size: 28px;
+  line-height: 1.18;
+}
+
+.search-intent-section p {
+  max-width: 620px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
 }
 
 .trim-options {
@@ -2689,7 +2761,8 @@ input:focus {
   .proof-section,
   .directory-hero,
   .detail-hero,
-  .evidence-section {
+  .evidence-section,
+  .search-intent-section {
     grid-template-columns: 1fr;
   }
 
@@ -2817,6 +2890,7 @@ input:focus {
   .metrics,
   .brand-grid,
   .proof-steps,
+  .intent-link-grid,
   .model-grid,
   .trim-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -2919,6 +2993,7 @@ input:focus {
   .metrics,
   .brand-grid,
   .proof-steps,
+  .intent-link-grid,
   .model-grid,
   .trim-grid {
     grid-template-columns: 1fr;

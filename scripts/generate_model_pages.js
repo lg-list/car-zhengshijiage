@@ -3,7 +3,7 @@ const path = require("node:path");
 const vm = require("node:vm");
 
 const root = path.resolve(__dirname, "..");
-const siteBase = "https://www.autoleledger.com";
+const siteBase = "https://lg-list.github.io/car-zhengshijiage";
 
 const brandNames = {
   toyota: "Toyota",
@@ -307,7 +307,7 @@ ${header("price", brandName)}
           <span class="eyebrow">${brandName} ${seo.segment} owner paid price</span>
           <h1 id="model-title">${seo.priceH1}</h1>
           <p class="seo-slogan">${seo.priceSlogan}</p>
-          <p class="seo-keywords-line">${data.name} real price paid ? ${data.name} owner paid price ? ${data.name} out-the-door price ? ${data.name} dealer quote ? US ${brandName} ${seo.segment} price reference</p>
+          <p class="seo-keywords-line">${data.name} real price paid | ${data.name} owner paid price | ${data.name} out-the-door price | ${data.name} dealer quote | US ${brandName} ${seo.segment} price reference</p>
         </div>
         <div class="hero-metrics" aria-label="Price overview">
           <div><strong id="sample-count">${data.cases}</strong><span>${data.name} owner samples</span></div>
@@ -345,6 +345,20 @@ ${header("price", brandName)}
         </div>
         <div class="owner-price-list" id="owner-price-list"></div>
       </section>
+
+      <section class="search-intent-section" aria-label="${data.name} related price searches">
+        <div>
+          <span class="module-kicker">Popular ${data.name} searches</span>
+          <h2>${data.name} price research by owner paid data, MSRP and dealer quote</h2>
+          <p>Use these crawlable links to compare the ${data.name} out-the-door price, same-brand alternatives, trim specs and current deal search results before negotiating with a US dealer.</p>
+        </div>
+        <div class="intent-link-grid">
+          <a href="./price.html">${data.name} owner paid price</a>
+          <a href="./config.html">${data.name} trim specs and MSRP</a>
+          <a href="../index.html">${brandName} model price directory</a>
+          <a href="../../../deals.html">${brandName} dealer quote search</a>
+        </div>
+      </section>
 ${priceFaqSection(data, seo)}
     </main>
     ${pageDataScript(data)}
@@ -377,7 +391,7 @@ ${header("config", brandName)}
           <span class="eyebrow">${brandName} ${seo.segment} specs and real prices</span>
           <h1 id="model-title">${seo.configH1}</h1>
           <p class="seo-slogan">${seo.configSlogan}</p>
-          <p class="seo-keywords-line">${data.name} trim specs ? ${data.name} MSRP ? ${data.name} dealer quote ? ${data.name} real owner paid price</p>
+          <p class="seo-keywords-line">${data.name} trim specs | ${data.name} MSRP | ${data.name} dealer quote | ${data.name} real owner paid price</p>
         </div>
         <div class="hero-metrics" aria-label="Trim overview">
           <div><strong id="trim-count">0</strong><span>${data.name} available trims</span></div>
@@ -410,6 +424,20 @@ ${header("config", brandName)}
         </div>
         <a href="./price.html">View Prices</a>
       </section>
+
+      <section class="search-intent-section" aria-label="${data.name} buying research links">
+        <div>
+          <span class="module-kicker">Compare before buying</span>
+          <h2>${data.name} specs, trims and real owner paid prices</h2>
+          <p>Move from trim details to actual owner paid prices, then compare ${brandName} alternatives and current dealer quote search results.</p>
+        </div>
+        <div class="intent-link-grid">
+          <a href="./price.html">${data.name} real owner paid prices</a>
+          <a href="../index.html">${brandName} owner price directory</a>
+          <a href="../../../deals.html">${data.name} price search</a>
+          <a href="../../../methodology.html">How AutoLedger verifies prices</a>
+        </div>
+      </section>
     </main>
     ${pageDataScript(data)}
     <script src="../../model.js?v=20260607-us-localized"></script>
@@ -422,7 +450,7 @@ ${header("config", brandName)}
 function brandIndexPage({ brand, brandName, models }) {
   const title = `${brandName} model directory and real owner paid prices | US car OTD price and dealer quote | AutoLedger`;
   const description = `Browse popular ${brandName} models in the US. Open each model to compare real owner paid prices, selling price, out-the-door price, dealer quote, city samples and trim specs.`;
-  const canonical = `${siteBase}/cars/${brand}/`;
+  const canonical = `${siteBase}/cars/${brand}/index.html`;
   const keywords = `${brandName} owner paid price, ${brandName} out the door price, ${brandName} OTD price, ${brandName} dealer quote, ${brandName} prices paid, ${brandName} model directory`;
   const cards = models
     .map((model) => {
@@ -533,7 +561,11 @@ function main() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemap
-  .map((loc) => `  <url><loc>${loc}</loc><changefreq>daily</changefreq><priority>${loc === siteBase + "/" ? "1.0" : "0.8"}</priority></url>`)
+  .map((loc) => {
+    const priority =
+      loc === siteBase + "/" ? "1.0" : loc.endsWith("/index.html") ? "0.9" : loc.endsWith("/price.html") ? "0.85" : "0.75";
+    return `  <url><loc>${loc}</loc><changefreq>daily</changefreq><priority>${priority}</priority></url>`;
+  })
   .join("\n")}
 </urlset>
 `;
